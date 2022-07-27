@@ -1,0 +1,578 @@
+<!DOCTYPE html><html><head>
+      <title>README</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////home/xolani/.vscode-server/extensions/shd101wyy.markdown-preview-enhanced-0.6.3/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="nextjs-material-kithttpsdemoscreative-timcomnextjs-material-kitrefnjsmk-readme-tweethttpsimgshieldsiotwitterurlhttpshieldsiosvgstylesociallogotwitterhttpstwittercomshareurlhttps3a2f2fdemoscreative-timcom2fnextjs-material-kit2fcomponentstextnextjs20material20kitviacreative20timhashtagsnextjs2023creativetim2023materialdesign"><a href="https://demos.creative-tim.com/nextjs-material-kit?ref=njsmk-readme">NextJS Material Kit</a> <a href="https://twitter.com/share?url=https%3A%2F%2Fdemos.creative-tim.com%2Fnextjs-material-kit%2Fcomponents&amp;text=NextJS%20Material%20Kit&amp;via=Creative%20Tim&amp;hashtags=nextjs%20%23creativetim%20%23materialdesign"><img src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social&amp;logo=twitter" alt="Tweet"></a></h1>
+
+<p><img src="https://img.shields.io/badge/version-1.2.0-blue.svg" alt="version"> <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="license"> <a href="https://github.com/creativetimofficial/nextjs-material-kit/issues?q=is%3Aopen+is%3Aissue"><img src="https://img.shields.io/github/issues/creativetimofficial/nextjs-material-kit.svg?maxAge=2592000" alt="GitHub issues open"></a> <a href="https://github.com/creativetimofficial/nextjs-material-kit/issues?q=is%3Aissue+is%3Aclosed"><img src="https://img.shields.io/github/issues-closed-raw/creativetimofficial/nextjs-material-kit.svg?maxAge=2592000" alt="GitHub issues closed"></a> <a href="https://gitter.im/creative-tim-general/Lobby"><img src="https://badges.gitter.im/NIT-dgp/General.svg" alt="Join the chat at https://gitter.im/NIT-dgp/General"></a> <a href="https://discord.gg/E4aHAQy"><img src="https://img.shields.io/badge/chat-on%20discord-7289da.svg" alt="Chat"></a></p>
+<p><img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/nextjs-material-kit/nextjs-material-kit.jpg" alt="Product Presentation Image"></p>
+<p><strong><a href="https://demos.creative-tim.com/nextjs-material-kit/?ref=njsmk-readme">NextJS Material Kit</a></strong> is a Free Material-UI Kit with a fresh, new design inspired by Google&apos;s material design and is was developed using <a href="https://nextjs.org/?ref=creativetim">NextJS</a>, starting from <a href="https://github.com/mui-org/material-ui/tree/master/examples/nextjs">this starter project</a> by <a href="https://material-ui.com/?ref=creativetim">Material-UI</a> and <a href="https://www.creative-tim.com/product/material-kit-react?ref=njsmk-readme">Material Kit React</a> by Creative Tim. You asked for it, so we built it. It&apos;s a great pleasure to introduce to you the material concepts in an easy to use and beautiful set of components. Along with the restyling of the Material-UI elements, you will find three fully-coded example pages, to help you design your NextJS project.</p>
+<p><strong><a href="https://demos.creative-tim.com/nextjs-material-kit/?ref=njsmk-readme">NextJS Material Kit</a></strong> makes use of light, surface and movement. It uses a deliberate color choice, edge-to-edge imagery and large scale typography. The general layout resembles sheets of paper following multiple different layers, so that the depth and order is obvious. The navigation stays mainly on the left and the actions on the right.</p>
+<p>This new design has elements that have been the result of research regarding ink and paper and the way objects and materials interact in real life. The result is a beautiful and consistent set of elements that can get you started with your next project. NextJS Material Kit is a great tool if you are looking to create a web presence for your web application and need to be consistent, leaving the impression of visually similar elements. It is also a great resource in its own right, looking gorgeous and helping you build your web pages.</p>
+<p><strong><a href="https://demos.creative-tim.com/nextjs-material-kit/?ref=njsmk-readme">NextJS Material Kit</a></strong> was built with the help of <a href="https://nextjs.org/?ref=creativetim">nextjs</a> and it uses a framework built by our friends from <strong><a href="https://material-ui.com/?ref=creativetim">Material-UI</a></strong>, who did an amazing job creating the backbone for the material effects, animations, ripples and transitions. Big thanks to this team for the effort and forward thinking they put into it.</p>
+<h2 class="mume-header" id="table-of-contents">Table of Contents</h2>
+
+<ul>
+<li><a href="#versions">Versions</a></li>
+<li><a href="#demo">Demo</a></li>
+<li><a href="#quick-start">Quick Start</a></li>
+<li><a href="#documentation">Documentation</a></li>
+<li><a href="#file-structure">File Structure</a></li>
+<li><a href="#browser-support">Browser Support</a></li>
+<li><a href="#resources">Resources</a></li>
+<li><a href="#reporting-issues">Reporting Issues</a></li>
+<li><a href="#licensing">Licensing</a></li>
+<li><a href="#useful-links">Useful Links</a></li>
+</ul>
+<h2 class="mume-header" id="versions">Versions</h2>
+
+<p><a href="https://www.creative-tim.com/product/material-kit?ref=njsmk-readme"><img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/html-logo.jpg?raw=true" width="60" height="60"></a><a href="https://www.creative-tim.com/product/nextjs-material-kit?ref=njsmk-readme"><img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/nextjs_logo.jpg?raw=true" width="60" height="60"></a><a href="https://www.creative-tim.com/product/vue-material-kit?ref=njsmk-readme"><img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/vue-logo.jpg?raw=true" width="60" height="60"></a><a href="https://www.creative-tim.com/product/material-kit-react?ref=njsmk-readme"><img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/react-logo.jpg?raw=true" width="60" height="60"></a><a href="https://www.creative-tim.com/product/material-kit-react-native?ref=njsmk-readme"><img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/react-native-logo.jpg?raw=true" width="60" height="60"></a><a href="https://demos.creative-tim.com/material-kit-figma/presentation.html?ref=njsmk-readme"><img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/figma-logo.jpg?raw=true" width="60" height="60"></a><a href="https://themeisle.com/themes/hestia/?ref=creativetim"><img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/wordpress-logo.jpg?raw=true" width="60" height="60"></a><a href="https://github.com/creativetimofficial/material-kit/tree/photoshop"><img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/photoshop-logo.jpg" width="60" height="60"></a><a href="https://github.com/creativetimofficial/material-kit/tree/sketch"><img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/sketch-logo.jpg" width="60" height="60"></a></p>
+<table>
+<thead>
+<tr>
+<th>React Native</th>
+<th>Figma</th>
+<th>WordPress</th>
+<th>NextJS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.creative-tim.com/product/material-kit-react-native?ref=njsmk-readme"><img src="https://github.com/creativetimofficial/public-assets/blob/master/material-kit-react-native/opt_mkrn_thumbnail.jpg?raw=true" alt="Material Kit React Native"></a></td>
+<td><a href="https://demos.creative-tim.com/material-kit-figma/presentation.html?ref=njsmk-readme"><img src="https://github.com/creativetimofficial/public-assets/blob/master/material-kit-figma/material-kit-figma.jpg?raw=true" alt="Material Kit Figma"></a></td>
+<td><a href="https://themeisle.com/themes/hestia/?ref=creativetim"><img src="https://github.com/creativetimofficial/public-assets/blob/master/material-kit-wordpress/opt_smd_thumbnail.jpg?raw=true" alt="Material Kit WordPress"></a></td>
+<td><a href="https://www.creative-tim.com/product/nextjs-material-kit?ref=njsmk-readme"><img src="https://github.com/creativetimofficial/public-assets/blob/master/nextjs-material-kit/nextjs-material-kit.jpg?raw=true" alt="NextJS Material Kit"></a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>HTML</th>
+<th>React</th>
+<th>Vue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.creative-tim.com/product/material-kit?ref=njsmk-readme"><img src="https://github.com/creativetimofficial/public-assets/blob/master/material-kit/material-kit.jpeg?raw=true" alt="Material Kit  HTML"></a></td>
+<td><a href="https://www.creative-tim.com/product/material-kit-react?ref=njsmk-readme"><img src="https://github.com/creativetimofficial/public-assets/blob/master/material-kit-react/material-kit-react.jpeg?raw=true" alt="Material Kit React"></a></td>
+<td><a href="https://www.creative-tim.com/product/vue-material-kit?ref=njsmk-readme"><img src="https://github.com/creativetimofficial/public-assets/blob/master/vue-material-kit/vue-material-kit.jpeg?raw=true" alt="Vue Material Kit"></a></td>
+</tr>
+</tbody>
+</table>
+<h2 class="mume-header" id="demo">Demo</h2>
+
+<table>
+<thead>
+<tr>
+<th>Buttons</th>
+<th>Inputs</th>
+<th>Navbars</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://demos.creative-tim.com/nextjs-material-kit/?ref=njsmk-readme"><img src="https://github.com/creativetimofficial/public-assets/blob/master/nextjs-material-kit/buttons.png?raw=true" alt="Buttons"></a></td>
+<td><a href="https://demos.creative-tim.com/nextjs-material-kit/?ref=njsmk-readme"><img src="https://github.com/creativetimofficial/public-assets/blob/master/nextjs-material-kit/inputs.png?raw=true" alt="Inputs"></a></td>
+<td><a href="https://demos.creative-tim.com/nextjs-material-kit/?ref=njsmk-readme"><img src="https://github.com/creativetimofficial/public-assets/blob/master/nextjs-material-kit/navbars.png?raw=true" alt="Navbar"></a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Login Page</th>
+<th>Landing Page</th>
+<th>Profile Page</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://demos.creative-tim.com/nextjs-material-kit/login?ref=njsmk-readme"><img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/nextjs-material-kit/login-page.png" alt="Login Page"></a></td>
+<td><a href="https://demos.creative-tim.com/nextjs-material-kit/landing?ref=njsmk-readme"><img src="https://github.com/creativetimofficial/public-assets/blob/master/nextjs-material-kit/landing-page.png?raw=true" alt="Landing Page"></a></td>
+<td><a href="https://demos.creative-tim.com/nextjs-material-kit/profile?ref=njsmk-readme"><img src="https://github.com/creativetimofficial/public-assets/blob/master/nextjs-material-kit/profile-page.png?raw=true" alt="Profile Page"></a></td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://demos.creative-tim.com/nextjs-material-kit/?ref=njsmk-readme">View More</a></p>
+<h2 class="mume-header" id="quick-start">Quick start</h2>
+
+<ul>
+<li><a href="https://github.com/creativetimofficial/nextjs-material-kit/archive/main.zip">Download from Github</a>.</li>
+<li><a href="https://www.creative-tim.com/product/nextjs-material-kit?ref=njsmk-readme">Download from Creative Tim</a>.</li>
+<li>Clone the repo: <code>git clone https://github.com/creativetimofficial/nextjs-material-kit.git</code>.</li>
+<li><code>npm i nextjs-material-kit</code></li>
+<li>Install with <a href="https://bower.io/?ref=creativetim">Bower</a>: <code>bower install nextjs-material-kit</code>.</li>
+</ul>
+<h2 class="mume-header" id="documentation">Documentation</h2>
+
+<p>The documentation for the NextJS Material Kit is hosted at our <a href="https://demos.creative-tim.com/nextjs-material-kit/documentation/tutorial?ref=njsmk-readme">website</a>.</p>
+<h2 class="mume-header" id="file-structure">File Structure</h2>
+
+<p>Within the download you&apos;ll find the following directories and files:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>nextjs-material-kit
+.
+&#x251C;&#x2500;&#x2500; CHANGELOG.md
+&#x251C;&#x2500;&#x2500; ISSUE_TEMPLATE.md
+&#x251C;&#x2500;&#x2500; LICENSE.md
+&#x251C;&#x2500;&#x2500; README.md
+&#x251C;&#x2500;&#x2500; next.config.js
+&#x251C;&#x2500;&#x2500; package.json
+&#x251C;&#x2500;&#x2500; Documentation
+&#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; assets
+&#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; tutorial-components.html
+&#x251C;&#x2500;&#x2500; assets
+&#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; css
+&#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; img
+&#x2502;&#xA0;&#xA0; &#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; examples
+&#x2502;&#xA0;&#xA0; &#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; faces
+&#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; jss
+&#x2502;&#xA0;&#xA0; &#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; nextjs-material-kit
+&#x2502;&#xA0;&#xA0; &#x2502;&#xA0;&#xA0; &#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; components
+&#x2502;&#xA0;&#xA0; &#x2502;&#xA0;&#xA0; &#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; pages
+&#x2502;&#xA0;&#xA0; &#x2502;&#xA0;&#xA0; &#x2502;&#xA0;&#xA0;     &#x251C;&#x2500;&#x2500; componentsSections
+&#x2502;&#xA0;&#xA0; &#x2502;&#xA0;&#xA0; &#x2502;&#xA0;&#xA0;     &#x2514;&#x2500;&#x2500; landingPageSections
+&#x2502;&#xA0;&#xA0; &#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; nextjs-material-kit.js
+&#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; scss
+&#x2502;&#xA0;&#xA0;     &#x251C;&#x2500;&#x2500; core
+&#x2502;&#xA0;&#xA0;     &#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; mixins
+&#x2502;&#xA0;&#xA0;     &#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; variables
+&#x2502;&#xA0;&#xA0;     &#x251C;&#x2500;&#x2500; plugins
+&#x2502;&#xA0;&#xA0;     &#x2514;&#x2500;&#x2500; nextjs-material-kit.scss
+&#x251C;&#x2500;&#x2500; pages
+&#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; _app.js
+&#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; _document.js
+&#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; _error.js
+&#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; components.js
+&#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; index.js
+&#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; landingpage.js
+&#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; loginpage.js
+&#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; profilepage.js
+&#x251C;&#x2500;&#x2500; components
+&#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; Badge
+&#x2502;&#xA0;&#xA0; &#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; Badge.js
+&#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; Card
+&#x2502;&#xA0;&#xA0; &#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; Card.js
+&#x2502;&#xA0;&#xA0; &#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; CardBody.js
+&#x2502;&#xA0;&#xA0; &#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; CardFooter.js
+&#x2502;&#xA0;&#xA0; &#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; CardHeader.js
+&#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; Clearfix
+&#x2502;&#xA0;&#xA0; &#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; Clearfix.js
+&#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; CustomButtons
+&#x2502;&#xA0;&#xA0; &#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; Button.js
+&#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; CustomDropdown
+&#x2502;&#xA0;&#xA0; &#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; CustomDropdown.js
+&#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; CustomInput
+&#x2502;&#xA0;&#xA0; &#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; CustomInput.js
+&#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; CustomLinearProgress
+&#x2502;&#xA0;&#xA0; &#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; CustomLinearProgress.js
+&#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; CustomTabs
+&#x2502;&#xA0;&#xA0; &#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; CustomTabs.js
+&#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; Footer
+&#x2502;&#xA0;&#xA0; &#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; Footer.js
+&#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; Grid
+&#x2502;&#xA0;&#xA0; &#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; GridContainer.js
+&#x2502;&#xA0;&#xA0; &#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; GridItem.js
+&#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; Header
+&#x2502;&#xA0;&#xA0; &#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; Header.js
+&#x2502;&#xA0;&#xA0; &#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; HeaderLinks.js
+&#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; InfoArea
+&#x2502;&#xA0;&#xA0; &#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; InfoArea.js
+&#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; NavPills
+&#x2502;&#xA0;&#xA0; &#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; NavPills.js
+&#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; PageChange
+&#x2502;&#xA0;&#xA0; &#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; PageChange.js
+&#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; Pagination
+&#x2502;&#xA0;&#xA0; &#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; Pagination.js
+&#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; Parallax
+&#x2502;&#xA0;&#xA0; &#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; Parallax.js
+&#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; Snackbar
+&#x2502;&#xA0;&#xA0; &#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; SnackbarContent.js
+&#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; Typography
+&#x2502;&#xA0;&#xA0;     &#x251C;&#x2500;&#x2500; Danger.js
+&#x2502;&#xA0;&#xA0;     &#x251C;&#x2500;&#x2500; Info.js
+&#x2502;&#xA0;&#xA0;     &#x251C;&#x2500;&#x2500; Muted.js
+&#x2502;&#xA0;&#xA0;     &#x251C;&#x2500;&#x2500; Primary.js
+&#x2502;&#xA0;&#xA0;     &#x251C;&#x2500;&#x2500; Quote.js
+&#x2502;&#xA0;&#xA0;     &#x251C;&#x2500;&#x2500; Small.js
+&#x2502;&#xA0;&#xA0;     &#x251C;&#x2500;&#x2500; Success.js
+&#x2502;&#xA0;&#xA0;     &#x2514;&#x2500;&#x2500; Warning.js
+&#x2514;&#x2500;&#x2500; pages-sections
+    &#x251C;&#x2500;&#x2500; Components-Sections
+    &#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; SectionBasics.js
+    &#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; SectionCarousel.js
+    &#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; SectionCompletedExamples.js
+    &#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; SectionDownload.js
+    &#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; SectionExamples.js
+    &#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; SectionJavascript.js
+    &#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; SectionLogin.js
+    &#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; SectionNavbars.js
+    &#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; SectionNotifications.js
+    &#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; SectionPills.js
+    &#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; SectionTabs.js
+    &#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; SectionTypography.js
+    &#x2514;&#x2500;&#x2500; LandingPage-Sections
+        &#x251C;&#x2500;&#x2500; ProductSection.js
+        &#x251C;&#x2500;&#x2500; TeamSection.js
+        &#x2514;&#x2500;&#x2500; WorkSection.js
+</code></pre><h2 class="mume-header" id="browser-support">Browser Support</h2>
+
+<p>At present, we officially aim to support the last two versions of the following browsers:</p>
+<p><img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/chrome-logo.png?raw=true" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/firefox-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/edge-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/safari-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/opera-logo.png" width="64" height="64"></p>
+<h2 class="mume-header" id="resources">Resources</h2>
+
+<ul>
+<li>Demo: <a href="https://demos.creative-tim.com/nextjs-material-kit/?ref=njsmk-readme">https://demos.creative-tim.com/nextjs-material-kit/?ref=njsmk-readme</a></li>
+<li>Download Page: <a href="https://www.creative-tim.com/product/nextjs-material-kit?ref=njsmk-readme">https://www.creative-tim.com/product/nextjs-material-kit?ref=njsmk-readme</a></li>
+<li>Documentation: <a href="https://demos.creative-tim.com/nextjs-material-kit/documentation/tutorial?ref=njsmk-readme">https://demos.creative-tim.com/nextjs-material-kit/documentation/tutorial?ref=njsmk-readme</a></li>
+<li>License Agreement: <a href="https://www.creative-tim.com/license?ref=njsmk-readme">https://www.creative-tim.com/license?ref=njsmk-readme</a></li>
+<li>Support: <a href="https://www.creative-tim.com/contact-us?ref=njsmk-readme">https://www.creative-tim.com/contact-us?ref=njsmk-readme</a></li>
+<li>Issues: <a href="https://github.com/creativetimofficial/nextjs-material-kit/issues">Github Issues Page</a></li>
+<li><strong>Dashboards:</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>HTML</th>
+<th>React</th>
+<th>Vue</th>
+<th>Angular</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.creative-tim.com/product/material-dashboard?ref=njsmk-readme"><img src="https://github.com/creativetimofficial/public-assets/blob/master/material-dashboard-html/material-dashboard.jpeg?raw=true" alt="Material Dashboard  HTML"></a></td>
+<td><a href="https://www.creative-tim.com/product/material-dashboard-react?ref=njsmk-readme"><img src="https://github.com/creativetimofficial/public-assets/blob/master/material-dashboard-react/material-dashboard-react.jpeg?raw=true" alt="Material Dashboard  React"></a></td>
+<td><a href="https://www.creative-tim.com/product/vue-material-dashboard?ref=njsmk-readme"><img src="https://github.com/creativetimofficial/public-assets/blob/master/vue-material-dashboard/vue-material-dashboard.jpeg?raw=true" alt="Vue Material Dashboard"></a></td>
+<td><a href="https://www.creative-tim.com/product/material-dashboard-angular2?ref=njsmk-readme"><img src="https://github.com/creativetimofficial/public-assets/blob/master/material-dashboard-angular/material-dashboard-angular.jpg?raw=true" alt=" Material Dashboard Angular"></a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>HTML Dark</th>
+<th>Laravel</th>
+<th>Vuetify</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.creative-tim.com/product/material-dashboard-dark?ref=njsmk-readme"><img src="https://github.com/creativetimofficial/public-assets/blob/master/material-dashboard-dark/material-dashboard-dark.jpg?raw=true" alt="Material Dashboard Dark"></a></td>
+<td><a href="https://www.creative-tim.com/product/material-dashboard-laravel?ref=njsmk-readme"><img src="https://github.com/creativetimofficial/public-assets/blob/master/material-dashboard-laravel/material-dashboard-laravel.jpg?raw=true" alt="Material Dashboard Laravel"></a></td>
+<td><a href="https://www.creative-tim.com/product/vuetify-material-dashboard?ref=njsmk-readme"><img src="https://github.com/creativetimofficial/public-assets/blob/master/material-dashboard-vuetify/material-dashboard-vuetify.jpg?raw=true" alt="Material Dashboard Vuetify"></a></td>
+</tr>
+</tbody>
+</table>
+<h2 class="mume-header" id="reporting-issues">Reporting Issues</h2>
+
+<p>We use GitHub Issues as the official bug tracker for the NextJS Material Kit. Here are some advices for our users that want to report an issue:</p>
+<ol>
+<li>Make sure that you are using the latest version of the Material Kit. Check the CHANGELOG from your dashboard on our <a href="https://www.creative-tim.com/?ref=njsmk-readme">website</a>.</li>
+<li>Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.</li>
+<li>Some issues may be browser specific, so specifying in what browser you encountered the issue might help.</li>
+</ol>
+<h2 class="mume-header" id="licensing">Licensing</h2>
+
+<ul>
+<li>
+<p>Copyright 2021 Creative Tim (<a href="https://www.creative-tim.com/?ref=njsmk-readme">https://www.creative-tim.com/?ref=njsmk-readme</a>)</p>
+</li>
+<li>
+<p>Licensed under MIT (<a href="https://github.com/creativetimofficial/nextjs-material-kit/blob/main/LICENSE.md">https://github.com/creativetimofficial/nextjs-material-kit/blob/main/LICENSE.md</a>)</p>
+</li>
+</ul>
+<h2 class="mume-header" id="useful-links">Useful Links</h2>
+
+<ul>
+<li><a href="https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w">Tutorials</a></li>
+<li><a href="https://www.creative-tim.com/affiliates/new?ref=njsmk-readme">Affiliate Program</a> (earn money)</li>
+<li><a href="http://blog.creative-tim.com/?ref=njsmk-readme">Blog Creative Tim</a></li>
+<li><a href="https://www.creative-tim.com/templates/free?direction=desc&amp;sort=created_at&amp;ref=njsmk-readme">Free Products</a> from Creative Tim</li>
+<li><a href="https://www.creative-tim.com/templates/premium?direction=desc&amp;sort=created_at&amp;ref=njsmk-readme">Premium Products</a> from Creative Tim</li>
+<li><a href="https://www.creative-tim.com/templates/react?direction=desc&amp;sort=created_at&amp;ref=njsmk-readme">React Products</a> from Creative Tim</li>
+<li><a href="https://www.creative-tim.com/templates/angular?direction=desc&amp;sort=created_at&amp;ref=njsmk-readme">Angular Products</a> from Creative Tim</li>
+<li><a href="https://www.creative-tim.com/templates/vuejs?direction=desc&amp;sort=created_atref=njsmk-readme">VueJS Products</a> from Creative Tim</li>
+<li><a href="https://www.creative-tim.com/templates?ref=njsmk-readme">More products</a> from Creative Tim</li>
+<li>Check our Bundles <a href="https://www.creative-tim.com/bundles?ref=njsmk-readme">here</a></li>
+</ul>
+<h3 class="mume-header" id="social-media">Social Media</h3>
+
+<p>Twitter: <a href="https://twitter.com/CreativeTim">https://twitter.com/CreativeTim</a></p>
+<p>Facebook: <a href="https://www.facebook.com/CreativeTim">https://www.facebook.com/CreativeTim</a></p>
+<p>Dribbble: <a href="https://dribbble.com/creativetim">https://dribbble.com/creativetim</a></p>
+<p>Instagram: <a href="https://www.instagram.com/CreativeTimOfficial">https://www.instagram.com/CreativeTimOfficial</a></p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
